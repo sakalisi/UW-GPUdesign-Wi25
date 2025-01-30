@@ -1,0 +1,5 @@
+5. A. We named the adder “chunked” adder and not just the adder since we are “chunking” its operation. Explain more about how we are doing this. What is the advantage of “chunking” this adder over a non-chunked implementation?
+
+Ans. The chunked adder is named so because it divides the addition process into two manageable "chunks": the lower and upper halves. The lower chunk adds the lower bits and produces a partial sum and a carry, which the upper chunk uses to compute the final result. 
+This approach reduces the critical path, making the design faster by limiting carry propagation to within chunks, improves scalability for larger bit-widths, and simplifies implementation by making the adder modular and easier to extend for different widths.
+

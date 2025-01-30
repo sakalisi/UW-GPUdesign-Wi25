@@ -24,6 +24,13 @@ module chunked_sub(
         // BLOCK A : Perform the two-block subtraction
 	// Over here, we want to perform a chunked subtraction operation similar to our chunked add operation in the provided file
         // START BLOCK
+        // Perform subtraction on the lower half and determine the borrow
+        {c0, out0} = {1'b0, a0} - {1'b0, b0};
+
+        // Compute possible results for the upper half
+        out10 = a1 - b1;         // Without borrow
+        out11 = a1 - b1 - 1;     // With borrow
+
 	// END BLOCK
 
         out1 = c0 ? out11 : out10;
