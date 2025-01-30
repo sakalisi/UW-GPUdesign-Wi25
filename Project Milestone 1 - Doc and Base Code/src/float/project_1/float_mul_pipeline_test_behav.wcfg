@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="float_add_pipeline_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_float_add_pipeline_sv_2422200108 " />
+            <top_module name="float_add_pipeline_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="565.873 ns"></ZoomStartTime>
+      <ZoomEndTime time="622.544 ns"></ZoomEndTime>
+      <Cursor1Time time="620.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="240"></NameColumnWidth>
+      <ValueColumnWidth column_width="238"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/float_add_pipeline_test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/a" type="array">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/b" type="array">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/out" type="array">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/a_real" type="other">
+      <obj_property name="ElementShortName">a_real</obj_property>
+      <obj_property name="ObjectShortName">a_real</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/b_real" type="other">
+      <obj_property name="ElementShortName">b_real</obj_property>
+      <obj_property name="ObjectShortName">b_real</obj_property>
+   </wvobject>
+   <wvobject fp_name="/float_add_pipeline_test/out_real" type="other">
+      <obj_property name="ElementShortName">out_real</obj_property>
+      <obj_property name="ObjectShortName">out_real</obj_property>
+   </wvobject>
+</wave_config>
