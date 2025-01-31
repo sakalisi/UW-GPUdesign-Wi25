@@ -1,5 +1,42 @@
+Integer Add/Sub
 5. A. We named the adder “chunked” adder and not just the adder since we are “chunking” its operation. Explain more about how we are doing this. What is the advantage of “chunking” this adder over a non-chunked implementation?
 
 Ans. The chunked adder is named so because it divides the addition process into two manageable "chunks": the lower and upper halves. The lower chunk adds the lower bits and produces a partial sum and a carry, which the upper chunk uses to compute the final result. 
 This approach reduces the critical path, making the design faster by limiting carry propagation to within chunks, improves scalability for larger bit-widths, and simplifies implementation by making the adder modular and easier to extend for different widths.
 
+Float Add
+B.	Give the lines of the code handling the special cases in S2 ( Zero and Overflow). Explain these cases in detail and why they need to be handled separately.
+
+if(|n_new_mant == 0) begin
+                    // if eveyrthing is zero ,then just return zero
+                    n_new_exp = '0;
+                    n_new_sign = 0;
+
+This Handles Zero. This needs to be handled separately, to save time (since 0 multiplied by anything is zero.
+
+for(int shift_int = float_mant_width - 1; shift_int >= 0; shift_int--) begin
+                        reg [$clog2(float_mant_width) - 1:0] shift;
+                        shift = shift_int[$clog2(float_mant_width) - 1:0];
+                        `assert_known(n_new_mant);
+                        if(n_new_mant[float_mant_width - shift] == 1) begin
+                            norm_shift = shift;
+                            new_mant_lookup[shift] = n_new_mant << shift;
+                        end
+                    end
+                    n_new_mant = new_mant_lookup[norm_shift];
+
+This handles Overflow. THis needs to be handled separately, since the new Mantissa value has a new width, and that value limits the overall length of the mantissa.
+
+C.	How many cycles is the module output valid for in the floating add?
+
+There is only 1 cycle when the output is valid for floating add, since the next state is the IDLE state, when the new ack is released to be 0.
+
+D.	From the code, can you tell how the floating point values are stored in the registers? Can you explain the representation? Do you know what this representation is called?
+
+Floating values are stored using these {} to concatenate values well. For example, storing values in registers like {3'b000, 2'b11, 2'b01} makes a newer variable 7'b0001101. 
+
+This allows us to use the IEEE 754 standard format of the float. 
+
+One example of this is -1.10000 * 2^4
+
+Here, the float is split into 3 parts, the sign, mantissa, and the exponent. The sign is either + or - (in this case -). The mantissa is the value with which a "scientific/binary notation value" is used. In this case (1.10000). THe Exponent is 2^4, in this case the value which will be stored is 4. When two numbers are added, the exponents are made equal, and then the mantissas are added up, with the sign in mind. 
