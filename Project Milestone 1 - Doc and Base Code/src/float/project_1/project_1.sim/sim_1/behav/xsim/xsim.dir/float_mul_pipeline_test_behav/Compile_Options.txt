@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "float_mul_pipeline_test_behav" "xil_defaultlib.float_mul_pipeline_test" "xil_defaultlib.glbl" -log "elaborate.log" 

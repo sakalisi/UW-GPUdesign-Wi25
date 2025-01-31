@@ -1,0 +1,111 @@
+Time resolution is 1 ps
+t=0 test.mon a=1.000000 b=1.000000 out=1.000000
+t=20 test.mon a=1.000000 b=1.000000 out=0.000000
+submitting zero req 0.000000 * 1.000000
+t=40 test.mon a=0.000000 b=1.000000 out=0.000000
+Should Be Equal test_mul a=0.000000 b=1.000000 out=0.000000
+submitting zero req 1.000000 * 0.000000
+t=390 test.mon a=1.000000 b=0.000000 out=0.000000
+Should Be Equal test_mul a=1.000000 b=0.000000 out=0.000000
+submitting zero req 0.000000 * 0.000000
+t=740 test.mon a=0.000000 b=0.000000 out=0.000000
+Should Be Equal test_mul a=0.000000 b=0.000000 out=0.000000
+submitting req 1.000000 * 1.000000
+t=1090 test.mon a=1.000000 b=1.000000 out=0.000000
+t=1410 test.mon a=1.000000 b=1.000000 out=1.000000
+cnt=32 ack=1
+test_mul a=1.000000 b=1.000000 out=1.000000
+submitting req 1.100000 * 1.100000
+t=1440 test.mon a=1.100000 b=1.100000 out=1.000000
+t=1760 test.mon a=1.100000 b=1.100000 out=1.210000
+cnt=32 ack=1
+test_mul a=1.100000 b=1.100000 out=1.210000
+submitting req 11.000000 * 11.000000
+t=1790 test.mon a=11.000000 b=11.000000 out=1.210000
+t=2110 test.mon a=11.000000 b=11.000000 out=121.000000
+cnt=32 ack=1
+test_mul a=11.000000 b=11.000000 out=121.000000
+submitting req 1.900000 * 1.900000
+t=2140 test.mon a=1.900000 b=1.900000 out=121.000000
+t=2460 test.mon a=1.900000 b=1.900000 out=3.610000
+cnt=32 ack=1
+test_mul a=1.900000 b=1.900000 out=3.610000
+submitting req 1.000000 * 2.000000
+t=2490 test.mon a=1.000000 b=2.000000 out=3.610000
+t=2810 test.mon a=1.000000 b=2.000000 out=2.000000
+cnt=32 ack=1
+test_mul a=1.000000 b=2.000000 out=2.000000
+submitting req 2.000000 * 1.000000
+t=2840 test.mon a=2.000000 b=1.000000 out=2.000000
+cnt=32 ack=1
+test_mul a=2.000000 b=1.000000 out=2.000000
+submitting req 2.000000 * 2.000000
+t=3190 test.mon a=2.000000 b=2.000000 out=2.000000
+t=3510 test.mon a=2.000000 b=2.000000 out=4.000000
+cnt=32 ack=1
+test_mul a=2.000000 b=2.000000 out=4.000000
+submitting req 2.000000 * 2.300000
+t=3540 test.mon a=2.000000 b=2.300000 out=4.000000
+t=3860 test.mon a=2.000000 b=2.300000 out=4.600000
+cnt=32 ack=1
+test_mul a=2.000000 b=2.300000 out=4.600000
+submitting req 8.000000 * 4.000000
+t=3890 test.mon a=8.000000 b=4.000000 out=4.600000
+t=4210 test.mon a=8.000000 b=4.000000 out=32.000000
+cnt=32 ack=1
+test_mul a=8.000000 b=4.000000 out=32.000000
+submitting req 10.000000 * 4.000000
+t=4240 test.mon a=10.000000 b=4.000000 out=32.000000
+t=4560 test.mon a=10.000000 b=4.000000 out=40.000000
+cnt=32 ack=1
+test_mul a=10.000000 b=4.000000 out=40.000000
+submitting req 10.100000 * 4.000000
+t=4590 test.mon a=10.099999 b=4.000000 out=40.000000
+t=4910 test.mon a=10.099999 b=4.000000 out=40.399998
+cnt=32 ack=1
+test_mul a=10.100000 b=4.000000 out=40.399998
+submitting req 101.000000 * 4.000000
+t=4940 test.mon a=101.000000 b=4.000000 out=40.399998
+t=5260 test.mon a=101.000000 b=4.000000 out=404.000000
+cnt=32 ack=1
+test_mul a=101.000000 b=4.000000 out=404.000000
+submitting req 100.000000 * 4.500000
+t=5290 test.mon a=100.000000 b=4.500000 out=404.000000
+t=5610 test.mon a=100.000000 b=4.500000 out=450.000000
+cnt=32 ack=1
+test_mul a=100.000000 b=4.500000 out=450.000000
+submitting req 20.000000 * 2.300000
+t=5640 test.mon a=20.000000 b=2.300000 out=450.000000
+t=5960 test.mon a=20.000000 b=2.300000 out=45.999996
+cnt=32 ack=1
+test_mul a=20.000000 b=2.300000 out=45.999996
+submitting req 200.000000 * 2.300000
+t=5990 test.mon a=200.000000 b=2.300000 out=45.999996
+t=6310 test.mon a=200.000000 b=2.300000 out=459.999969
+cnt=32 ack=1
+test_mul a=200.000000 b=2.300000 out=459.999969
+submitting req 200.000000 * 100.000000
+t=6340 test.mon a=200.000000 b=100.000000 out=459.999969
+t=6660 test.mon a=200.000000 b=100.000000 out=20000.000000
+cnt=32 ack=1
+test_mul a=200.000000 b=100.000000 out=20000.000000
+submitting req 2000.000000 * 2.300000
+t=6690 test.mon a=2000.000000 b=2.300000 out=20000.000000
+t=7010 test.mon a=2000.000000 b=2.300000 out=4599.999512
+cnt=32 ack=1
+test_mul a=2000.000000 b=2.300000 out=4599.999512
+submitting req -2000.000000 * 2.300000
+t=7040 test.mon a=-2000.000000 b=2.300000 out=4599.999512
+t=7360 test.mon a=-2000.000000 b=2.300000 out=-4599.999512
+cnt=32 ack=1
+test_mul a=-2000.000000 b=2.300000 out=-4599.999512
+submitting req 2000.000000 * -2.300000
+t=7390 test.mon a=2000.000000 b=-2.300000 out=-4599.999512
+cnt=32 ack=1
+test_mul a=2000.000000 b=-2.300000 out=-4599.999512
+submitting req -2000.000000 * -2.300000
+t=7740 test.mon a=-2000.000000 b=-2.300000 out=-4599.999512
+t=8060 test.mon a=-2000.000000 b=-2.300000 out=4599.999512
+cnt=32 ack=1
+test_mul a=-2000.000000 b=-2.300000 out=4599.999512
+$finish called at time : 8090 ns : File "C:/Users/jayan/Documents/University Of Washington/Repos/UW-GPUdesign-Wi25/Project Milestone 1 - Doc and Base Code/src/float/float_mul_pipeline_test.sv" Line 130
