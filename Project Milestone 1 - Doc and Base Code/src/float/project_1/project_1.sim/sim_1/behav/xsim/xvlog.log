@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/jayan/Documents/University Of Washington/Education/Masters/2024-2025/Winter/GPU Design Verilog/Project Milestone 1 - Doc and Base Code/src/float/float_add_pipeline.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module float_add_pipeline
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/jayan/Documents/University Of Washington/Education/Masters/2024-2025/Winter/GPU Design Verilog/Project Milestone 1 - Doc and Base Code/src/float/float_add_pipeline_test.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module float_add_pipeline_test

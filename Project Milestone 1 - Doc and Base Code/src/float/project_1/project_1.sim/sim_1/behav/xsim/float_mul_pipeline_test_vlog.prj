@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../partial_multi_cycle_24bit_2bpc_float.v" \
+
+sv xil_defaultlib  \
+"../../../../../float_mul_pipeline.sv" \
+"../../../../../float_mul_pipeline_test.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

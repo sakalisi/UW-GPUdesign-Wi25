@@ -30,6 +30,15 @@ module mul_pipeline_cycle_24bit_2bpc(
         end else if (!ack) begin
             // BLOCK F : Calculate the mantissa product and give an ack when the product is ready
 	    // START BLOCK
+            if (bit_counter < 24) begin     // "24-bit" word so check if it is within limit and keep adding shifted a to the product until its not
+                if (b_reg[bit_counter]) begin
+                    partial_product = partial_product + (a_reg << bit_counter);  // Adding shifted a to partial_product
+                end
+                bit_counter <= bit_counter + 1;  // Incrementing bit_counter for the next b bit
+            end else begin
+                product <= partial_product;
+                ack <= 1'b1;
+            end
 	    // END BLOCK
         end
     end

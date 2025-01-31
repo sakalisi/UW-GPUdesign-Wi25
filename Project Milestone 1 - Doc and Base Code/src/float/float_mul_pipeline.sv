@@ -69,6 +69,15 @@ module float_mul_pipeline #(
                 UNPACK: begin
                     // BLOCK D : The UNPACK stage : Set up the multiplier for the "MULTPLY" stage
 		    // START BLOCK
+                sign <= a[float_width-1] ^ b[float_width-1];
+                exponent_a <= a[float_width-2:MANTISSA_WIDTH]; // extracting exponent
+                exponent_b <= b[float_width-2:MANTISSA_WIDTH]; 
+                mantissa_a <= {1'b1, a[MANTISSA_WIDTH-1:0]};    // extracting mantissa
+                mantissa_b <= {1'b1, b[MANTISSA_WIDTH-1:0]};
+                state <= MULTIPLY;  // 
+                start_mul <= 1'b1;
+                set_ack <= 1'b0;
+
 		    // END BLOCK
                 end
 
@@ -83,6 +92,14 @@ module float_mul_pipeline #(
                 NORMALIZE: begin
                     // BLOCK E : Get the normalised mantissa from the mantissa product outputted from the mantissa multiplier
 		    // START BLOCK
+		         if (mantissa_product[47]) begin
+                        normalized_mantissa <= mantissa_product[46:24];
+                        exponent_sum <= exponent_sum + 1;
+                    end else begin
+                        normalized_mantissa <= mantissa_product[45:23];
+                    end
+                    state <= SET_EXP;
+
 		    // END BLOCK
                 end
                 
