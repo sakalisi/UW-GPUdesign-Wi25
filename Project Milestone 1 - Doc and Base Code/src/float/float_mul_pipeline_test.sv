@@ -48,7 +48,7 @@ module float_mul_pipeline_test();
         end while(~ack && cnt < 35); // Wait for up to 5 clock cycles
 
         `assert(ack);
-        $display("Should Be Equal test_mul a=%0f b=%0f out=%0f", _a, _b, to_real(out));
+        $display("Should Be zero test_mul a=%0f b=%0f out=%0f", _a, _b, to_real(out));
         `assert(reals_near(to_real(out), expected_out));
 
         repeat(2) tick();
@@ -76,7 +76,7 @@ module float_mul_pipeline_test();
 
         `assert(ack);
         $display("cnt=%0d ack=%b", cnt, ack);
-        $display("test_mul a=%0f b=%0f out=%0f", _a, _b, to_real(out));
+        $display("Should be Equal test_mul a=%0f b=%0f out=%0f", _a, _b, to_real(out));
         `assert(reals_near(to_real(out), expected_out));
         repeat(2) tick();
         `assert(~ack);

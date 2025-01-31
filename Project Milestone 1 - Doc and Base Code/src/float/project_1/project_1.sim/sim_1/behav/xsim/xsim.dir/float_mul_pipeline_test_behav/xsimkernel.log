@@ -1,7 +1,7 @@
-Running: xsim.dir/float_mul_pipeline_test_behav/xsimk.exe -simmode gui -wdb float_mul_pipeline_test_behav.wdb -simrunnum 0 -socket 49382
+Running: xsim.dir/float_mul_pipeline_test_behav/xsimk.exe -simmode gui -wdb float_mul_pipeline_test_behav.wdb -simrunnum 0 -socket 61432
 Design successfully loaded
-Design Loading Memory Usage: 27408 KB (Peak: 27408 KB)
-Design Loading CPU Usage: 406 ms
+Design Loading Memory Usage: 27384 KB (Peak: 27384 KB)
+Design Loading CPU Usage: 546 ms
 Simulation completed
-Simulation Memory Usage: 28664 KB (Peak: 28664 KB)
-Simulation CPU Usage: 437 ms
+Simulation Memory Usage: 28632 KB (Peak: 28632 KB)
+Simulation CPU Usage: 546 ms

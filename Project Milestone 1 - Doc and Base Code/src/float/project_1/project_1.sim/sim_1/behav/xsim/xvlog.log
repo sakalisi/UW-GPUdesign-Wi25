@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jayan/Documents/University Of Washington/Repos/UW-GPUdesign-Wi25/Project Milestone 1 - Doc and Base Code/src/float/partial_multi_cycle_24bit_2bpc_float.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_pipeline_cycle_24bit_2bpc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/jayan/Documents/University Of Washington/Repos/UW-GPUdesign-Wi25/Project Milestone 1 - Doc and Base Code/src/float/float_mul_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float_mul_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/jayan/Documents/University Of Washington/Repos/UW-GPUdesign-Wi25/Project Milestone 1 - Doc and Base Code/src/float/float_mul_pipeline_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module float_mul_pipeline_test

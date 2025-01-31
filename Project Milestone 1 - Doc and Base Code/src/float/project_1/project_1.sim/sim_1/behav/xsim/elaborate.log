@@ -6,4 +6,14 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/jayan/Documents/University Of Washington/Repos/UW-GPUdesign-Wi25/Project Milestone 1 - Doc and Base Code/src/float/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/jayan/Documents/University Of Washington/Repos/UW-GPUdesign-Wi25/Project Milestone 1 - Doc and Base Code/src/float/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_float_mul_pipeline_sv_1960...
+Compiling module xil_defaultlib.mul_pipeline_cycle_24bit_2bpc
+Compiling module xil_defaultlib.float_mul_pipeline
+Compiling module xil_defaultlib.float_mul_pipeline_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot float_mul_pipeline_test_behav
