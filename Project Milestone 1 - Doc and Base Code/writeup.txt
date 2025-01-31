@@ -49,5 +49,15 @@ Here, the float is split into 3 parts, the sign, mantissa, and the exponent. The
 Float Mult
 -------------------------------------------------------------
 E.	Explain the mechanism of the “NORMALISE” state of the FP multiplier. Why does the mechanism we suggested work?
+
+For the IEEE 754 format, the mantissa needs to be between 1 and 2 for normalized numbers. 
+After multiplication, an overflow could cause the number to be between 1 and 4. (since max 2 x max 2 is max 4).
+To ensure that the output normalizes well, the overflow bit is measured. 
+If it is 0, then we know that it is less than 2, due to the nature of binary numbers. 
+If it is 1, then we can just right shift to keep the value less than 2, and increment the exponent.
+Since the multiplication of exponents with the same base is the addition of the power, we see that this mechanism works well.
+
 F.	How many cycles is the module output valid for in the floating mul? Is this different from the floating_add module?
+
+The module output is valid until the next output is out/ack is reset. This is different from the floaring_add module.
 
