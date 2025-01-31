@@ -1,10 +1,14 @@
+------------------------------------------------------------
 Integer Add/Sub
+------------------------------------------------------------
 5. A. We named the adder “chunked” adder and not just the adder since we are “chunking” its operation. Explain more about how we are doing this. What is the advantage of “chunking” this adder over a non-chunked implementation?
 
 Ans. The chunked adder is named so because it divides the addition process into two manageable "chunks": the lower and upper halves. The lower chunk adds the lower bits and produces a partial sum and a carry, which the upper chunk uses to compute the final result. 
 This approach reduces the critical path, making the design faster by limiting carry propagation to within chunks, improves scalability for larger bit-widths, and simplifies implementation by making the adder modular and easier to extend for different widths.
 
+-------------------------------------------------------------
 Float Add
+-------------------------------------------------------------
 B.	Give the lines of the code handling the special cases in S2 ( Zero and Overflow). Explain these cases in detail and why they need to be handled separately.
 
 if(|n_new_mant == 0) begin
@@ -40,3 +44,10 @@ This allows us to use the IEEE 754 standard format of the float.
 One example of this is -1.10000 * 2^4
 
 Here, the float is split into 3 parts, the sign, mantissa, and the exponent. The sign is either + or - (in this case -). The mantissa is the value with which a "scientific/binary notation value" is used. In this case (1.10000). THe Exponent is 2^4, in this case the value which will be stored is 4. When two numbers are added, the exponents are made equal, and then the mantissas are added up, with the sign in mind. 
+
+-------------------------------------------------------------
+Float Mult
+-------------------------------------------------------------
+E.	Explain the mechanism of the “NORMALISE” state of the FP multiplier. Why does the mechanism we suggested work?
+F.	How many cycles is the module output valid for in the floating mul? Is this different from the floating_add module?
+
